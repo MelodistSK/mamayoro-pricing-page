@@ -815,30 +815,21 @@
             border-radius: 5px;
         }
 
-        .pack-image-placeholder {
+        .pack-image-preview {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             border: 2px solid var(--border-light);
+            object-fit: cover;
         }
 
-        .pack-image-placeholder:hover {
-            transform: scale(1.02);
+        .pack-image-preview:hover {
+            transform: scale(1.05);
             border-color: var(--primary-blue);
             box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-        }
-
-        .pack-image-placeholder-text {
-            color: var(--primary-blue);
-            font-size: 0.9rem;
-            font-weight: 600;
         }
 
         @keyframes fadeIn {
@@ -983,9 +974,7 @@
         
         <div class="pack-grid">
             <div class="pack-item">
-                <div class="pack-image-placeholder" onclick="openModal('meishi-modal')">
-                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
-                </div>
+                <img src="./images/meishi-1.jpg" alt="名刺管理ツール" class="pack-image-preview" onclick="openModal('meishi-modal')">
                 <div class="pack-name">名刺管理ツール</div>
                 <div class="pack-price">50万円〜</div>
                 <div class="pack-period">納期: 1ヶ月〜</div>
@@ -993,9 +982,7 @@
             </div>
 
             <div class="pack-item">
-                <div class="pack-image-placeholder" onclick="openModal('gijiroku-modal')">
-                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
-                </div>
+                <img src="./images/gijiroku-1.jpg" alt="議事録自動化" class="pack-image-preview" onclick="openModal('gijiroku-modal')">
                 <div class="pack-name">議事録自動化</div>
                 <div class="pack-price">60万円〜</div>
                 <div class="pack-period">納期: 1ヶ月〜</div>
@@ -1003,9 +990,7 @@
             </div>
 
             <div class="pack-item">
-                <div class="pack-image-placeholder" onclick="openModal('task-modal')">
-                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
-                </div>
+                <img src="./images/task-1.jpg" alt="タスク管理" class="pack-image-preview" onclick="openModal('task-modal')">
                 <div class="pack-name">タスク管理</div>
                 <div class="pack-price">50万円〜</div>
                 <div class="pack-period">納期: 1ヶ月〜</div>
@@ -1013,9 +998,7 @@
             </div>
 
             <div class="pack-item">
-                <div class="pack-image-placeholder" onclick="openModal('invoice-modal')">
-                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
-                </div>
+                <img src="./images/invoice-1.jpg" alt="見積書・請求書" class="pack-image-preview" onclick="openModal('invoice-modal')">
                 <div class="pack-name">見積書・請求書</div>
                 <div class="pack-price">60万円〜</div>
                 <div class="pack-period">納期: 1-2ヶ月〜</div>
@@ -1023,9 +1006,7 @@
             </div>
 
             <div class="pack-item">
-                <div class="pack-image-placeholder" onclick="openModal('saiyo-modal')">
-                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
-                </div>
+                <img src="./images/saiyo-1.jpg" alt="採用管理" class="pack-image-preview" onclick="openModal('saiyo-modal')">
                 <div class="pack-name">採用管理</div>
                 <div class="pack-price">70万円〜</div>
                 <div class="pack-period">納期: 1-2ヶ月〜</div>
@@ -1033,9 +1014,7 @@
             </div>
 
             <div class="pack-item">
-                <div class="pack-image-placeholder" onclick="openModal('crm-modal')">
-                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
-                </div>
+                <img src="./images/crm-1.jpg" alt="顧客管理(CRM)" class="pack-image-preview" onclick="openModal('crm-modal')">
                 <div class="pack-name">顧客管理(CRM)</div>
                 <div class="pack-price">60万円〜</div>
                 <div class="pack-period">納期: 1-2ヶ月〜</div>
