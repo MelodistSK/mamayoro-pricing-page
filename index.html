@@ -1023,13 +1023,13 @@
             </div>
 
             <div class="pack-item">
-                <div class="pack-image-placeholder" onclick="openModal('zaiko-modal')">
+                <div class="pack-image-placeholder" onclick="openModal('saiyo-modal')">
                     <span class="pack-image-placeholder-text">📸 画像を表示</span>
                 </div>
-                <div class="pack-name">在庫管理</div>
+                <div class="pack-name">採用管理</div>
                 <div class="pack-price">70万円〜</div>
                 <div class="pack-period">納期: 1-2ヶ月〜</div>
-                <div class="pack-description">入出庫管理、在庫アラート</div>
+                <div class="pack-description">応募者管理、選考フロー、面接記録</div>
             </div>
 
             <div class="pack-item">
@@ -1124,21 +1124,21 @@
             </div>
         </div>
 
-        <div id="zaiko-modal" class="modal" onclick="closeModal('zaiko-modal')">
+        <div id="saiyo-modal" class="modal" onclick="closeModal('saiyo-modal')">
             <div class="modal-content" onclick="event.stopPropagation()">
-                <button class="modal-close" onclick="closeModal('zaiko-modal')">&times;</button>
-                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">在庫管理</h3>
-                <div class="image-slider" id="zaiko-slider">
-                    <button class="slider-nav prev" onclick="prevSlide('zaiko-slider')">&lt;</button>
-                    <button class="slider-nav next" onclick="nextSlide('zaiko-slider')">&gt;</button>
+                <button class="modal-close" onclick="closeModal('saiyo-modal')">&times;</button>
+                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">採用管理</h3>
+                <div class="image-slider" id="saiyo-slider">
+                    <button class="slider-nav prev" onclick="prevSlide('saiyo-slider')">&lt;</button>
+                    <button class="slider-nav next" onclick="nextSlide('saiyo-slider')">&gt;</button>
                     <div class="slider-container">
-                        <img src="https://via.placeholder.com/800x600/16a085/ffffff?text=在庫管理+-+画像1" alt="在庫管理 1" class="slider-image">
-                        <img src="https://via.placeholder.com/800x600/16a085/ffffff?text=在庫管理+-+画像2" alt="在庫管理 2" class="slider-image">
+                        <img src="https://via.placeholder.com/800x600/16a085/ffffff?text=採用管理+-+画像1" alt="採用管理 1" class="slider-image">
+                        <img src="https://via.placeholder.com/800x600/16a085/ffffff?text=採用管理+-+画像2" alt="採用管理 2" class="slider-image">
                     </div>
                 </div>
                 <div class="slider-dots">
-                    <span class="slider-dot active" onclick="goToSlide('zaiko-slider', 0)"></span>
-                    <span class="slider-dot" onclick="goToSlide('zaiko-slider', 1)"></span>
+                    <span class="slider-dot active" onclick="goToSlide('saiyo-slider', 0)"></span>
+                    <span class="slider-dot" onclick="goToSlide('saiyo-slider', 1)"></span>
                 </div>
                 <p style="margin-top: 1rem; color: var(--text-gray); text-align: center; font-size: 0.9rem;">※ 左右の矢印またはスワイプで画像を切り替えられます</p>
             </div>
