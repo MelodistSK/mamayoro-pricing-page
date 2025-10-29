@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="株式会社ままよろ サービス価格表 - 明確な料金体系でビジネスのDXを支援">
+    <title>料金プラン - 株式会社ままよろ</title>
+    <style>
+        :root {
+            --primary-navy: #2c3e50;
+            --primary-blue: #3498db;
+            --accent-blue: #5dade2;
+            --success-green: #27ae60;
+            --warning-orange: #e67e22;
+            --bg-white: #ffffff;
+            --bg-light: #f8f9fa;
+            --bg-gray: #ecf0f1;
+            --text-dark: #2c3e50;
+            --text-gray: #7f8c8d;
+            --text-light: #95a5a6;
+            --border-light: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background: var(--bg-white);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #34495e 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Section Common */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Service Overview */
+        .service-overview {
+            background: var(--bg-light);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .overview-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-light);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: var(--primary-blue);
+        }
+
+        .overview-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .overview-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .overview-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .overview-description {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Speed Pack */
+        .speed-pack {
+            background: white;
+        }
+
+        .pack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .pack-item {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .pack-item:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+
+        .pack-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .pack-price {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pack-period {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pack-description {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Full Support */
+        .full-support {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+        }
+
+        .support-highlight {
+            background: white;
+            border: 3px solid var(--primary-blue);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 2rem auto;
+            box-shadow: 0 10px 40px rgba(52, 152, 219, 0.2);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .price-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .price-option {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-blue) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .price-option-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-option-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-option-detail {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            color: var(--primary-navy);
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-content p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .process-flow {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .process-step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .process-step-title {
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step-description {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* DX Support */
+        .dx-support {
+            background: white;
+        }
+
+        .support-card {
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e7f3 100%);
+            border: 2px solid var(--primary-blue);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .support-price-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .support-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .support-period {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+        }
+
+        .included-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .included-list li {
+            padding: 0.8rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-dark);
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .included-list li:last-child {
+            border-bottom: none;
+        }
+
+        .included-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Customer Journey */
+        .customer-journey {
+            background: var(--bg-light);
+        }
+
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .journey-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid var(--border-light);
+        }
+
+        .journey-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .journey-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .journey-step {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            color: var(--primary-navy);
+        }
+
+        .journey-arrow {
+            text-align: center;
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background: white;
+        }
+
+        .faq-list {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .faq-item {
+            background: var(--bg-light);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-navy);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e8eaed;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+        }
+
+        .faq-question.active::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-gray);
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .cta-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 1.2rem 3rem;
+            background: white;
+            color: var(--primary-navy);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: var(--primary-navy);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact {
+            margin: 1.5rem 0;
+        }
+
+        .footer-email {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .footer-email:hover {
+            background: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #fff3cd;
+            border-left: 4px solid var(--warning-orange);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .info-box-title {
+            font-weight: 600;
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box-content {
+            color: #856404;
+            font-size: 0.95rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text-gray);
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-light);
+            color: var(--primary-navy);
+        }
+
+        /* Image Slider */
+        .image-slider {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 1rem auto;
+            overflow: hidden;
+            border-radius: 10px;
+            touch-action: pan-y pinch-zoom;
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .slider-image {
+            width: 100%;
+            flex-shrink: 0;
+            border-radius: 10px;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-navy);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .slider-nav:hover {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .slider-nav.prev {
+            left: 10px;
+        }
+
+        .slider-nav.next {
+            right: 10px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 1rem;
+        }
+
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border-light);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: var(--primary-blue);
+            width: 24px;
+            border-radius: 5px;
+        }
+
+        .pack-image-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-light);
+        }
+
+        .pack-image-placeholder:hover {
+            transform: scale(1.02);
+            border-color: var(--primary-blue);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .pack-image-placeholder-text {
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .support-highlight,
+            .support-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .slider-nav {
+                width: 35px;
+                height: 35px;
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">株式会社ままよろ</div>
+            <ul class="nav-links">
+                <li><a href="#overview">サービス概要</a></li>
+                <li><a href="#speed-pack">スピード導入</a></li>
+                <li><a href="#full-support">フルサポート</a></li>
+                <li><a href="#dx-support">DX支援</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">料金説明</h1>
+            <p class="hero-subtitle">
+                お客様の課題と段階に合わせた、明確な料金プラン。<br>
+                IT導入補助金で最大50%の負担軽減も可能です。
+            </p>
+        </div>
+    </div>
+
+    <!-- Service Overview -->
+    <section class="service-overview" id="overview">
+        <h2 class="section-title">3つのサービス</h2>
+        <p class="section-subtitle">導入から運用まで、段階に応じた最適なサポート</p>
+        
+        <div class="overview-grid">
+            <div class="overview-card">
+                <div class="overview-number">1</div>
+                <div class="overview-title">スピード導入パック</div>
+                <div class="overview-price">50〜70万円(買い切り)</div>
+                <div class="overview-description">
+                    既存機能から選んで、すぐに導入。<br>
+                    名刺管理、議事録、タスク管理など、<br>
+                    1機能から購入可能。
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <div class="overview-number">2</div>
+                <div class="overview-title">フルサポート開発</div>
+                <div class="overview-price">月額45万円〜 / 一括払いも可</div>
+                <div class="overview-description">
+                    コンサルから業務設計、構築まで全てお任せ。<br>
+                    要件変更にも柔軟に対応。<br>
+                    月単位で進められるアジャイル開発。
+                </div>
+            </div>
+
+            <div class="overview-card">
+                <div class="overview-number">3</div>
+                <div class="overview-title">継続DX支援プラン</div>
+                <div class="overview-price">月額10万円</div>
+                <div class="overview-description">
+                    納品後の運用サポート。<br>
+                    保守＋DX/AI/IT相談し放題＋月1MTG。<br>
+                    継続的な改善をサポート。
+                </div>
+            </div>
+        </div>
+
+        <div style="max-width: 900px; margin: 3rem auto; padding: 2.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 15px; border: 2px solid var(--border-light);">
+            <h3 style="color: var(--primary-navy); font-size: 1.3rem; margin-bottom: 1.5rem; text-align: center;">💡 サービス活用例</h3>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 2rem; font-size: 0.95rem;">以下は典型的な活用パターンの例です。お客様の状況に応じて最適なプランをご提案します。</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--primary-blue);">
+                    <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">小規模スタートの例</div>
+                    <div style="color: var(--text-gray); font-size: 0.9rem;">スピード導入パック → 継続DX支援プラン</div>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--success-green);">
+                    <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">本格DX推進の例</div>
+                    <div style="color: var(--text-gray); font-size: 0.9rem;">フルサポート開発 → 継続DX支援プラン</div>
+                </div>
+                <div style="background: white; padding: 1.5rem; border-radius: 10px; border-left: 4px solid var(--warning-orange);">
+                    <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">既存システムありの例</div>
+                    <div style="color: var(--text-gray); font-size: 0.9rem;">継続DX支援プランのみ契約</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speed Pack Details -->
+    <section class="speed-pack" id="speed-pack">
+        <h2 class="section-title">スピード導入パック</h2>
+        <p class="section-subtitle">既存機能から選べる、即導入可能なパッケージ</p>
+        
+        <div class="pack-grid">
+            <div class="pack-item">
+                <div class="pack-image-placeholder" onclick="openModal('meishi-modal')">
+                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
+                </div>
+                <div class="pack-name">名刺管理ツール</div>
+                <div class="pack-price">50万円〜</div>
+                <div class="pack-period">納期: 1ヶ月〜</div>
+                <div class="pack-description">名刺OCR登録、顧客管理、検索機能</div>
+            </div>
+
+            <div class="pack-item">
+                <div class="pack-image-placeholder" onclick="openModal('gijiroku-modal')">
+                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
+                </div>
+                <div class="pack-name">議事録自動化</div>
+                <div class="pack-price">60万円〜</div>
+                <div class="pack-period">納期: 1ヶ月〜</div>
+                <div class="pack-description">Notta連携、AI要約、LINE通知</div>
+            </div>
+
+            <div class="pack-item">
+                <div class="pack-image-placeholder" onclick="openModal('task-modal')">
+                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
+                </div>
+                <div class="pack-name">タスク管理</div>
+                <div class="pack-price">50万円〜</div>
+                <div class="pack-period">納期: 1ヶ月〜</div>
+                <div class="pack-description">カンバンボード、期限管理、通知</div>
+            </div>
+
+            <div class="pack-item">
+                <div class="pack-image-placeholder" onclick="openModal('invoice-modal')">
+                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
+                </div>
+                <div class="pack-name">見積書・請求書</div>
+                <div class="pack-price">60万円〜</div>
+                <div class="pack-period">納期: 1-2ヶ月〜</div>
+                <div class="pack-description">自動計算、PDF生成、メール送信</div>
+            </div>
+
+            <div class="pack-item">
+                <div class="pack-image-placeholder" onclick="openModal('zaiko-modal')">
+                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
+                </div>
+                <div class="pack-name">在庫管理</div>
+                <div class="pack-price">70万円〜</div>
+                <div class="pack-period">納期: 1-2ヶ月〜</div>
+                <div class="pack-description">入出庫管理、在庫アラート</div>
+            </div>
+
+            <div class="pack-item">
+                <div class="pack-image-placeholder" onclick="openModal('crm-modal')">
+                    <span class="pack-image-placeholder-text">📸 画像を表示</span>
+                </div>
+                <div class="pack-name">顧客管理(CRM)</div>
+                <div class="pack-price">60万円〜</div>
+                <div class="pack-period">納期: 1-2ヶ月〜</div>
+                <div class="pack-description">顧客情報管理、商談履歴、分析</div>
+            </div>
+        </div>
+
+        <!-- Modals for images -->
+        <div id="meishi-modal" class="modal" onclick="closeModal('meishi-modal')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal('meishi-modal')">&times;</button>
+                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">名刺管理ツール</h3>
+                <div class="image-slider" id="meishi-slider">
+                    <button class="slider-nav prev" onclick="prevSlide('meishi-slider')">&lt;</button>
+                    <button class="slider-nav next" onclick="nextSlide('meishi-slider')">&gt;</button>
+                    <div class="slider-container">
+                        <img src="https://via.placeholder.com/800x600/3498db/ffffff?text=名刺管理ツール+-+画像1" alt="名刺管理ツール 1" class="slider-image">
+                        <img src="https://via.placeholder.com/800x600/3498db/ffffff?text=名刺管理ツール+-+画像2" alt="名刺管理ツール 2" class="slider-image">
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="slider-dot active" onclick="goToSlide('meishi-slider', 0)"></span>
+                    <span class="slider-dot" onclick="goToSlide('meishi-slider', 1)"></span>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-gray); text-align: center; font-size: 0.9rem;">※ 左右の矢印またはスワイプで画像を切り替えられます</p>
+            </div>
+        </div>
+
+        <div id="gijiroku-modal" class="modal" onclick="closeModal('gijiroku-modal')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal('gijiroku-modal')">&times;</button>
+                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">議事録自動化</h3>
+                <div class="image-slider" id="gijiroku-slider">
+                    <button class="slider-nav prev" onclick="prevSlide('gijiroku-slider')">&lt;</button>
+                    <button class="slider-nav next" onclick="nextSlide('gijiroku-slider')">&gt;</button>
+                    <div class="slider-container">
+                        <img src="https://via.placeholder.com/800x600/27ae60/ffffff?text=議事録自動化+-+画像1" alt="議事録自動化 1" class="slider-image">
+                        <img src="https://via.placeholder.com/800x600/27ae60/ffffff?text=議事録自動化+-+画像2" alt="議事録自動化 2" class="slider-image">
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="slider-dot active" onclick="goToSlide('gijiroku-slider', 0)"></span>
+                    <span class="slider-dot" onclick="goToSlide('gijiroku-slider', 1)"></span>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-gray); text-align: center; font-size: 0.9rem;">※ 左右の矢印またはスワイプで画像を切り替えられます</p>
+            </div>
+        </div>
+
+        <div id="task-modal" class="modal" onclick="closeModal('task-modal')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal('task-modal')">&times;</button>
+                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">タスク管理</h3>
+                <div class="image-slider" id="task-slider">
+                    <button class="slider-nav prev" onclick="prevSlide('task-slider')">&lt;</button>
+                    <button class="slider-nav next" onclick="nextSlide('task-slider')">&gt;</button>
+                    <div class="slider-container">
+                        <img src="https://via.placeholder.com/800x600/e67e22/ffffff?text=タスク管理+-+画像1" alt="タスク管理 1" class="slider-image">
+                        <img src="https://via.placeholder.com/800x600/e67e22/ffffff?text=タスク管理+-+画像2" alt="タスク管理 2" class="slider-image">
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="slider-dot active" onclick="goToSlide('task-slider', 0)"></span>
+                    <span class="slider-dot" onclick="goToSlide('task-slider', 1)"></span>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-gray); text-align: center; font-size: 0.9rem;">※ 左右の矢印またはスワイプで画像を切り替えられます</p>
+            </div>
+        </div>
+
+        <div id="invoice-modal" class="modal" onclick="closeModal('invoice-modal')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal('invoice-modal')">&times;</button>
+                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">見積書・請求書</h3>
+                <div class="image-slider" id="invoice-slider">
+                    <button class="slider-nav prev" onclick="prevSlide('invoice-slider')">&lt;</button>
+                    <button class="slider-nav next" onclick="nextSlide('invoice-slider')">&gt;</button>
+                    <div class="slider-container">
+                        <img src="https://via.placeholder.com/800x600/9b59b6/ffffff?text=見積書・請求書+-+画像1" alt="見積書・請求書 1" class="slider-image">
+                        <img src="https://via.placeholder.com/800x600/9b59b6/ffffff?text=見積書・請求書+-+画像2" alt="見積書・請求書 2" class="slider-image">
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="slider-dot active" onclick="goToSlide('invoice-slider', 0)"></span>
+                    <span class="slider-dot" onclick="goToSlide('invoice-slider', 1)"></span>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-gray); text-align: center; font-size: 0.9rem;">※ 左右の矢印またはスワイプで画像を切り替えられます</p>
+            </div>
+        </div>
+
+        <div id="zaiko-modal" class="modal" onclick="closeModal('zaiko-modal')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal('zaiko-modal')">&times;</button>
+                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">在庫管理</h3>
+                <div class="image-slider" id="zaiko-slider">
+                    <button class="slider-nav prev" onclick="prevSlide('zaiko-slider')">&lt;</button>
+                    <button class="slider-nav next" onclick="nextSlide('zaiko-slider')">&gt;</button>
+                    <div class="slider-container">
+                        <img src="https://via.placeholder.com/800x600/16a085/ffffff?text=在庫管理+-+画像1" alt="在庫管理 1" class="slider-image">
+                        <img src="https://via.placeholder.com/800x600/16a085/ffffff?text=在庫管理+-+画像2" alt="在庫管理 2" class="slider-image">
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="slider-dot active" onclick="goToSlide('zaiko-slider', 0)"></span>
+                    <span class="slider-dot" onclick="goToSlide('zaiko-slider', 1)"></span>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-gray); text-align: center; font-size: 0.9rem;">※ 左右の矢印またはスワイプで画像を切り替えられます</p>
+            </div>
+        </div>
+
+        <div id="crm-modal" class="modal" onclick="closeModal('crm-modal')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeModal('crm-modal')">&times;</button>
+                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">顧客管理(CRM)</h3>
+                <div class="image-slider" id="crm-slider">
+                    <button class="slider-nav prev" onclick="prevSlide('crm-slider')">&lt;</button>
+                    <button class="slider-nav next" onclick="nextSlide('crm-slider')">&gt;</button>
+                    <div class="slider-container">
+                        <img src="https://via.placeholder.com/800x600/2980b9/ffffff?text=顧客管理(CRM)+-+画像1" alt="顧客管理 1" class="slider-image">
+                        <img src="https://via.placeholder.com/800x600/2980b9/ffffff?text=顧客管理(CRM)+-+画像2" alt="顧客管理 2" class="slider-image">
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="slider-dot active" onclick="goToSlide('crm-slider', 0)"></span>
+                    <span class="slider-dot" onclick="goToSlide('crm-slider', 1)"></span>
+                </div>
+                <p style="margin-top: 1rem; color: var(--text-gray); text-align: center; font-size: 0.9rem;">※ 左右の矢印またはスワイプで画像を切り替えられます</p>
+            </div>
+        </div>
+
+        <div style="max-width: 1000px; margin: 3rem auto;">
+            <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 2.5rem; border-radius: 15px; border-left: 5px solid var(--success-green);">
+                <h3 style="color: var(--success-green); font-size: 1.4rem; margin-bottom: 1.5rem; text-align: center;">✅ スピード導入パックの特徴</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">⚡ すぐに導入可能</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">既存機能のため即稼働</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">🎯 1機能から購入</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">手軽に始められる</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">🔧 カスタマイズ対応</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">基本的な調整が可能</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">📖 マニュアル付き</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">操作ガイド完備</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">🎁 1ヶ月無料サポート</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">導入後も安心</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Support Development -->
+    <section class="full-support" id="full-support">
+        <h2 class="section-title">フルサポート開発</h2>
+        <p class="section-subtitle">コンサルから構築まで、業務改革を伴走支援</p>
+        
+        <div class="support-highlight">
+            <div style="text-align: center;">
+                <span class="badge">⭐ 本格的なDX推進におすすめ</span>
+            </div>
+            
+            <div class="price-options">
+                <div class="price-option">
+                    <div class="price-option-label">月額制</div>
+                    <div class="price-option-value">45万円/月〜</div>
+                    <div class="price-option-detail">柔軟に進められるアジャイル開発</div>
+                </div>
+                <div class="price-option">
+                    <div class="price-option-label">一括払い</div>
+                    <div class="price-option-value">300〜600万円</div>
+                    <div class="price-option-detail">規模に応じた見積もり</div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary-navy); font-size: 1.5rem; margin: 2rem 0 1.5rem; text-align: center;">
+                業務改革から実装まで、すべてお任せください
+            </h3>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <div class="feature-content">
+                        <h4>コンサルティング</h4>
+                        <p>業務フローの可視化と改善提案</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📐</div>
+                    <div class="feature-content">
+                        <h4>全体設計</h4>
+                        <p>最適なシステム構成を設計</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <div class="feature-content">
+                        <h4>アジャイル開発</h4>
+                        <p>作りながら改善、柔軟に対応</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-content">
+                        <h4>要件変更対応</h4>
+                        <p>途中の変更も月単位で調整可能</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔗</div>
+                    <div class="feature-content">
+                        <h4>システム連携</h4>
+                        <p>既存システムとの連携も対応</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📚</div>
+                    <div class="feature-content">
+                        <h4>研修サポート</h4>
+                        <p>導入後の教育・定着支援</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-flow">
+                <h3 style="color: var(--primary-navy); margin-bottom: 1rem; text-align: center;">開発の流れ</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="process-step-number">1</div>
+                        <div class="process-step-title">初期ヒアリング</div>
+                        <div class="process-step-description">課題の整理と目標設定(無料)</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-step-number">2</div>
+                        <div class="process-step-title">業務設計</div>
+                        <div class="process-step-description">フロー可視化と改善提案</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-step-number">3</div>
+                        <div class="process-step-title">開発・構築</div>
+                        <div class="process-step-description">月単位で進めながら調整</div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-step-number">4</div>
+                        <div class="process-step-title">納品・研修</div>
+                        <div class="process-step-description">操作研修とマニュアル提供</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top: 2rem;">
+                <div class="info-box-title">💰 IT導入補助金活用で実質負担を軽減</div>
+                <div class="info-box-content">
+                    月額45万円×6ヶ月の場合、補助金活用で実質 <strong>135万円〜</strong>(通常270万円)
+                </div>
+            </div>
+        </div>
+
+        <div style="max-width: 1000px; margin: 3rem auto;">
+            <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 2.5rem; border-radius: 15px; border-left: 5px solid var(--primary-blue);">
+                <h3 style="color: var(--primary-blue); font-size: 1.4rem; margin-bottom: 1.5rem; text-align: center;">🎯 フルサポート開発が向いている方</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">📊 業務全体を改善</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">見直しから効率化まで</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">💬 相談しながら進行</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">何から始めるか一緒に</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">🔄 要件変更に対応</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">柔軟なアジャイル開発</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">🔗 機能を連携</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">複数システムの統合</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">💰 初期投資を抑制</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">月額制で負担分散</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DX Support Plan -->
+    <section class="dx-support" id="dx-support">
+        <h2 class="section-title">継続DX支援プラン</h2>
+        <p class="section-subtitle">納品後も安心。保守＋相談＋改善提案がすべて込み</p>
+        
+        <div class="support-card">
+            <div class="support-price-box">
+                <div class="support-price">月額10万円</div>
+                <div class="support-period">継続的な運用サポート</div>
+            </div>
+
+            <h3 style="color: var(--primary-navy); font-size: 1.5rem; margin: 2rem 0 1.5rem; text-align: center;">
+                保守だけじゃない。DXパートナーとして伴走します
+            </h3>
+
+            <ul class="included-list">
+                <li>システム保守・運用サポート</li>
+                <li>DX/AI/ITに関する相談し放題</li>
+                <li>月1回のオンラインMTG(戦略相談)</li>
+                <li>軽微な修正・改善対応</li>
+                <li>優先サポート(平日10-18時)</li>
+                <li>月次レポート</li>
+                <li>セキュリティアップデート</li>
+                <li>バックアップ管理</li>
+            </ul>
+
+            <div style="background: white; padding: 2rem; border-radius: 10px; margin-top: 2rem; border: 2px solid var(--success-green);">
+                <h4 style="color: var(--success-green); margin-bottom: 1rem; text-align: center;">💎 継続DX支援の価値</h4>
+                <p style="color: var(--text-dark); line-height: 1.8; text-align: center;">
+                    単なる保守ではなく、「DXパートナー」として継続的に伴走。<br>
+                    新しい業務課題が出てきたら相談、AIの活用方法を相談、<br>
+                    システムの改善提案など、常に最適化をサポートします。
+                </p>
+            </div>
+        </div>
+
+        <div style="max-width: 1000px; margin: 3rem auto;">
+            <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 2.5rem; border-radius: 15px; border-left: 5px solid var(--warning-orange);">
+                <h3 style="color: var(--warning-orange); font-size: 1.4rem; margin-bottom: 1.5rem; text-align: center;">✅ 継続DX支援プランが向いている方</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">🔒 安定稼働</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">システムを守りたい</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">💬 すぐ相談できる</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">困ったときの相手</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">🤖 AI/DX最新情報</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">常にキャッチアップ</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">🔄 継続改善</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">システムを育てる</div>
+                    </div>
+                    <div style="background: white; padding: 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-weight: 600; color: var(--primary-navy); margin-bottom: 0.5rem;">📊 月1定例MTG</div>
+                        <div style="color: var(--text-gray); font-size: 0.9rem;">戦略を相談</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Journey -->
+    <section class="customer-journey" id="journey">
+        <h2 class="section-title">お客様の導入パターン</h2>
+        <p class="section-subtitle">3つの典型的な導入フロー</p>
+        
+        <div class="journey-grid">
+            <div class="journey-card">
+                <div class="journey-title">パターンA<br>小規模スタート</div>
+                <div class="journey-flow">
+                    <div class="journey-step">スピード導入パック<br>(50-70万円)</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">使ってみて効果実感</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">継続DX支援プラン<br>(月額10万円)</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">徐々に機能拡張</div>
+                </div>
+            </div>
+
+            <div class="journey-card">
+                <div class="journey-title">パターンB<br>本格的DX推進</div>
+                <div class="journey-flow">
+                    <div class="journey-step">フルサポート開発<br>(月額45万円×N ヶ月)</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">3-12ヶ月で構築完了</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">継続DX支援プラン<br>(月額10万円)</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">運用しながら改善</div>
+                </div>
+            </div>
+
+            <div class="journey-card">
+                <div class="journey-title">パターンC<br>既存システムあり</div>
+                <div class="journey-flow">
+                    <div class="journey-step">既にkintoneを導入済</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">継続DX支援プランのみ契約<br>(月額10万円)</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">運用サポート＋改善提案</div>
+                    <div class="journey-arrow">↓</div>
+                    <div class="journey-step">必要に応じて追加開発</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <h2 class="section-title">よくある質問</h2>
+        <p class="section-subtitle">お客様からよく寄せられる質問にお答えします</p>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">3つのサービスの違いは?</div>
+                <div class="faq-answer">
+                    スピード導入パックは既存機能を即導入、フルサポート開発は業務全体を設計から構築、継続DX支援プランは納品後の運用サポートです。段階に応じて組み合わせることも可能です。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">フルサポート開発は月額と一括どちらがお得?</div>
+                <div class="faq-answer">
+                    月額制はアジャイルで柔軟に進められ、途中の変更にも対応しやすいメリットがあります。一括払いは予算が確定している場合に適しています。お客様の状況に応じてご提案します。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">継続DX支援プランだけの契約は可能?</div>
+                <div class="faq-answer">
+                    はい、可能です。既にkintoneを導入済みの企業様が、運用サポートや改善提案を求めて契約されるケースもあります。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">補助金の申請は難しいですか?</div>
+                <div class="faq-answer">
+                    フルサポート開発には補助金申請サポートが含まれています。必要書類の準備から申請まで、全面的にサポートいたします。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">kintoneのライセンス費用は別ですか?</div>
+                <div class="faq-answer">
+                    はい、別途必要です。ユーザー数により月額1,800円/人×人数の費用がかかります。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">どのサービスを選べばいいかわかりません</div>
+                <div class="faq-answer">
+                    まずは無料相談をご利用ください。お客様の状況をヒアリングし、最適なプランをご提案いたします。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">途中解約は可能ですか?</div>
+                <div class="faq-answer">
+                    継続DX支援プランは1ヶ月前の事前通知で解約可能です。フルサポート開発(月額制)の場合は、プロジェクトの進捗状況を見ながらご相談させていただきます。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">リモート対応は可能ですか?</div>
+                <div class="faq-answer">
+                    全国対応可能です。打ち合わせはオンライン、必要に応じて訪問も可能です。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem;">株式会社ままよろ</div>
+                <div style="opacity: 0.8; margin-bottom: 0.5rem;">営業担当: 平野</div>
+            </div>
+            
+            <div class="footer-contact">
+                <div style="opacity: 0.8; margin-bottom: 0.5rem;">お気軽にお問い合わせください</div>
+                <a href="mailto:t.hirano@mamayoro.com?subject=料金プランについてのお問い合わせ" class="footer-email">
+                    📧 t.hirano@mamayoro.com
+                </a>
+            </div>
+
+            <div style="opacity: 0.8; margin-top: 1.5rem;">営業時間: 平日 9:00-18:00(土日祝: オンライン相談のみ)</div>
+            
+            <div class="footer-links">
+                <a href="#overview">サービス概要</a>
+                <a href="#speed-pack">スピード導入</a>
+                <a href="#full-support">フルサポート</a>
+                <a href="#dx-support">DX支援</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div style="margin-top: 2rem; opacity: 0.6; font-size: 0.9rem;">
+                © 2025 株式会社ままよろ All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slider management object
+        const sliders = {};
+
+        // Initialize slider
+        function initSlider(sliderId) {
+            if (!sliders[sliderId]) {
+                sliders[sliderId] = {
+                    currentIndex: 0,
+                    touchStartX: 0,
+                    touchEndX: 0,
+                    isDragging: false
+                };
+                
+                const slider = document.getElementById(sliderId);
+                if (slider) {
+                    // Add touch event listeners
+                    slider.addEventListener('touchstart', handleTouchStart, { passive: true });
+                    slider.addEventListener('touchmove', handleTouchMove, { passive: true });
+                    slider.addEventListener('touchend', handleTouchEnd, { passive: true });
+                }
+            }
+        }
+
+        // Handle touch start
+        function handleTouchStart(e) {
+            const sliderId = e.currentTarget.id;
+            sliders[sliderId].touchStartX = e.touches[0].clientX;
+            sliders[sliderId].isDragging = true;
+        }
+
+        // Handle touch move
+        function handleTouchMove(e) {
+            const sliderId = e.currentTarget.id;
+            if (!sliders[sliderId].isDragging) return;
+            sliders[sliderId].touchEndX = e.touches[0].clientX;
+        }
+
+        // Handle touch end
+        function handleTouchEnd(e) {
+            const sliderId = e.currentTarget.id;
+            if (!sliders[sliderId].isDragging) return;
+            
+            sliders[sliderId].isDragging = false;
+            const diffX = sliders[sliderId].touchStartX - sliders[sliderId].touchEndX;
+            
+            // Swipe threshold
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    // Swipe left - next slide
+                    nextSlide(sliderId);
+                } else {
+                    // Swipe right - previous slide
+                    prevSlide(sliderId);
+                }
+            }
+        }
+
+        // Go to specific slide
+        function goToSlide(sliderId, index) {
+            initSlider(sliderId);
+            
+            const slider = document.getElementById(sliderId);
+            if (!slider) return;
+            
+            const container = slider.querySelector('.slider-container');
+            const images = container.querySelectorAll('.slider-image');
+            const dots = slider.parentElement.querySelectorAll('.slider-dot');
+            
+            // Clamp index
+            index = Math.max(0, Math.min(index, images.length - 1));
+            sliders[sliderId].currentIndex = index;
+            
+            // Update transform
+            container.style.transform = `translateX(-${index * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Next slide
+        function nextSlide(sliderId) {
+            initSlider(sliderId);
+            
+            const slider = document.getElementById(sliderId);
+            if (!slider) return;
+            
+            const images = slider.querySelectorAll('.slider-image');
+            const newIndex = (sliders[sliderId].currentIndex + 1) % images.length;
+            goToSlide(sliderId, newIndex);
+        }
+
+        // Previous slide
+        function prevSlide(sliderId) {
+            initSlider(sliderId);
+            
+            const slider = document.getElementById(sliderId);
+            if (!slider) return;
+            
+            const images = slider.querySelectorAll('.slider-image');
+            const newIndex = (sliders[sliderId].currentIndex - 1 + images.length) % images.length;
+            goToSlide(sliderId, newIndex);
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Initialize slider when modal opens
+                const slider = modal.querySelector('.image-slider');
+                if (slider) {
+                    initSlider(slider.id);
+                    goToSlide(slider.id, 0);
+                }
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isActive = this.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    this.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Initialize all sliders on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.image-slider').forEach(slider => {
+                initSlider(slider.id);
+            });
+        });
+    </script>
+</body>
+</html>
